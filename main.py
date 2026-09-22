@@ -1,12 +1,12 @@
 import operator
 import turtle as t
 print("Калькулятор")
-f = input("Графики. 1 - прямая, 2 - гипербола")
-if f == "1":
+f = int(input("Графики. 1 - прямая, 2 - гипербола"))
+if f == 1:
     print("1")
-elif f == "2":
+elif f == 2:
     print("2")
-elif f == "3":
+elif f == 3:
     operations = {
     "+": operator.add,
     "-": operator.sub,
