@@ -4,32 +4,7 @@ import turtle as t
 k = 22
 
 print("Калькулятор")
-<<<<<<< HEAD
-f = int(input("Графики. 1 - прямая, 2 - гипербола"))
-if f == 1:
-    print("1")
-elif f == 2:
-    print("2")
-elif f == 3:
-    operations = {
-    "+": operator.add,
-    "-": operator.sub,
-    "*": operator.mul,
-    "/": operator.truediv,
-    "//":operator.floordiv,
-    "%": operator.mod,
-    "**": operator.pow
-    }
-    a, op, b = input("Введите выражение: ").split()
-    a = float(a)
-    b = float(b)
 
-    result = operations[op](a, b)
-
-    print(result)
-
-
-=======
 f = int(input("Графики. 1 - прямая, 2 - гипербола, 3 - обычный калькулятор\n"))
 
 def axes():
@@ -84,8 +59,24 @@ elif f == 2:
     a, b, c = map(int, input("Введите данные в виде a b c\n").split())
     hyp(a, b, c)
 elif f == 3:
-    print("Калькулятор чисел")
->>>>>>> Gleb
+    operations = {
+    "+": operator.add,
+    "-": operator.sub,
+    "*": operator.mul,
+    "/": operator.truediv,
+    "//":operator.floordiv,
+    "%": operator.mod,
+    "**": operator.pow
+    }
+    a, op, b = input("Введите выражение: ").split()
+    a = float(a)
+    b = float(b)
+
+    result = operations[op](a, b)
+
+    print(result)
+
+
 else:
     print("Ошибка ввода")
 
