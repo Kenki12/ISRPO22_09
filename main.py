@@ -1,5 +1,6 @@
 import operator
 import turtle as t
+
 print("Калькулятор")
 f = int(input("Графики. 1 - прямая, 2 - гипербола"))
 if f == 1:
@@ -23,6 +24,7 @@ elif f == 3:
     result = operations[op](a, b)
 
     print(result)
+
 
 else:
     print("Ошибка ввода")
