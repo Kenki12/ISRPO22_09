@@ -5,7 +5,7 @@ k = 22
 
 def introduce():
     return "Калькулятор, способный вычеслять два вида графиков и основные операции с числами"
-f = int(input("Графики. 1 - прямая, 2 - гипербола, 3 - обычный калькулятор\n"))
+f = int(input("Графики. 1 - прямая, 2 - гипербола, 4 - парабола, 4 - обычный калькулятор\n"))
 
 def axes():
     t.tracer(0)
@@ -50,6 +50,24 @@ def hyp(a, b, c):
 
     t.mainloop()
 
+def par(a, b):
+    axes()
+    t.up()
+    t.tracer(0)
+    t.screensize(1000, 1000)
+
+    for x in range(-10, 0):
+        y = (a//x) + b
+        t.goto(x*k, y*k)
+        t.dot(5, "red")
+
+    for x in range(1, 11):
+        y = (a//x) + b
+        t.goto(x*k, y*k)
+        t.dot(5, "red")
+
+    t.mainloop()
+
 if f == 1:
     print("Прямая y = ax + b")
     a, b = map(int, input("Введите данные в виде a b\n").split())
@@ -59,6 +77,10 @@ elif f == 2:
     a, b, c = map(int, input("Введите данные в виде a b c\n").split())
     hyp(a, b, c)
 elif f == 3:
+    print("Парабола - y = a/x + b")
+    a, b = map(int, input("Введите данные в виде a b").split())
+    par(a, b)
+elif f == 4:
     print("Калькулятор чисел")
 else:
     print("Ошибка ввода")
